@@ -56,7 +56,7 @@ class ReidChecker:
                 self.img_selectors = []
                 for tb in self.reid_dict[self.cur_id].values():
                     imgs = self.get_imgs(tb)
-                    print(f'Loading {len(imgs)} images...')
+                    print(f'ID: {self.cur_id} Loading {len(imgs)} images...')
                     cis = ImageSelector(imgs)
                     self.img_selectors.append(cis)
                     display(cis)
