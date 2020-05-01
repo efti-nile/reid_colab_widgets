@@ -52,7 +52,7 @@ class ReidChecker:
         with self.outs[1]:
             clear_output()
             if self.ids_to_sort:
-                self.cur_id = self.ids_to_sort.pop()
+                self.cur_id = self.ids_to_sort.pop(0)
                 self.img_selectors = []
                 for tb in self.reid_dict[self.cur_id].values():
                     imgs = self.get_imgs(tb)
